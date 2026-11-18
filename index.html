@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Locations">
+  <meta name="theme-color" content="#2b59c3">
+  <title>Locations – Expressive Identification</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============ SETUP ============ -->
+  <section id="screen-setup" class="screen" hidden>
+    <div class="setup-wrap">
+      <header class="setup-head">
+        <h1>Locations <span class="sub">Expressive Identification</span></h1>
+        <div class="counter" id="select-counter" aria-live="polite">0 of 6 selected</div>
+      </header>
+      <div class="mode-picker" role="radiogroup" aria-label="Teaching mode">
+        <div class="mode-label">Teaching mode</div>
+        <div class="mode-options">
+          <button type="button" class="mode-btn" id="mode-errorless" data-mode="errorless" role="radio" aria-checked="false">
+            <span class="mode-name">Errorless Learning</span>
+          </button>
+          <button type="button" class="mode-btn" id="mode-correction" data-mode="correction" role="radio" aria-checked="false">
+            <span class="mode-name">Error Correction</span>
+          </button>
+        </div>
+      </div>
+      <p class="hint">Select 2 to 6 locations for this session.</p>
+      <div class="lesson-reminder" id="lesson-reminder">
+        <strong>Reminder:</strong> Refer to lesson notes to ensure the correct number of targets have been selected.
+      </div>
+      <div id="photo-warning" class="warning" hidden></div>
+      <ul id="location-list" class="location-list"></ul>
+      <div class="setup-actions">
+        <span class="start-reminder">Check lesson notes for the correct number of targets.</span>
+        <button id="btn-start" class="btn btn-primary btn-xl" disabled>Start Session</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEACHING ============ -->
+  <section id="screen-teach" class="screen" hidden>
+    <header class="teach-bar">
+      <div class="bar-left">
+        <div class="trial-counter" id="trial-counter">Trial 1 of 15</div>
+        <div class="mode-badge" id="mode-badge"></div>
+      </div>
+      <div class="bar-actions">
+        <button id="btn-answer" class="btn btn-ghost btn-answer">Show Answer</button>
+        <button id="btn-undo" class="btn btn-ghost">Undo Last Response</button>
+        <button id="btn-pause" class="btn btn-ghost">Pause Session</button>
+        <button id="btn-startover" class="btn btn-ghost btn-danger-text">Start Over</button>
+      </div>
+    </header>
+    <main class="teach-main">
+      <div class="photo-wrap" id="photo-wrap">
+        <img id="photo" alt="" draggable="false">
+        <div id="photo-missing" class="photo-missing" hidden>Photograph file not found. Check the photos folder.</div>
+        <div id="celebration" class="celebration" hidden aria-hidden="true">
+          <div class="confetti" id="confetti"></div>
+          <div class="celebrate-text" id="celebrate-text"></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="prompt-area">
+        <div class="stage-tag" id="stage-tag"></div>
+        <div class="sd-box" id="sd-box">
+          <div class="sd-label">Say:</div>
+          <div class="sd-text" id="sd-text"></div>
+          <div class="prompt-chosen" id="prompt-chosen" hidden></div>
+        </div>
+        <div class="instruction-box" id="instruction-box" hidden>
+          <div class="instruction-text" id="instruction-text">Prompt</div>
+          <div class="instruction-sub" id="instruction-sub">Choose Full Echoic or Partial Echoic.</div>
+        </div>
+        </div>
+        <div class="score-buttons" id="score-buttons">
+          <button class="btn btn-score btn-correct" data-response="correct" id="btn-correct">Correct</button>
+          <button class="btn btn-score btn-incorrect" data-response="incorrect" id="btn-incorrect">Incorrect</button>
+          <button class="btn btn-score btn-noresp" data-response="noresp" id="btn-noresp">No Response</button>
+          <div class="prompt-stack">
+            <button class="btn btn-score btn-prompt" data-prompt="full" aria-pressed="false" id="btn-prompt">Full Echoic</button>
+            <button class="btn btn-score btn-prompt-partial" data-prompt="partial" aria-pressed="false" id="btn-prompt-partial">Partial Echoic</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="answer-overlay" class="overlay answer-overlay" hidden>
+      <div class="overlay-card answer-card">
+        <div class="answer-label">Correct response</div>
+        <div class="answer-name" id="answer-name"></div>
+        <div class="answer-accept" id="answer-accept"></div>
+        <div class="answer-bt-note" id="answer-bt-note" hidden></div>
+        <p class="answer-note">Natural phrasing that names the location also counts (e.g. &ldquo;the <span id="answer-example"></span>&rdquo;).</p>
+        <button id="btn-answer-close" class="btn btn-primary btn-lg">Hide</button>
+      </div>
+    </div>
+
+    <div id="paused-overlay" class="overlay" hidden>
+      <div class="overlay-card">
+        <h2>Session Paused</h2>
+        <p>No response has been recorded. The current opportunity is saved.</p>
+        <button id="btn-resume" class="btn btn-primary btn-xl">Resume Session</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESULTS ============ -->
+  <section id="screen-results" class="screen" hidden>
+    <div class="results-wrap">
+      <header class="results-head">
+        <h1>Session Results</h1>
+        <div class="results-mode" id="results-mode"></div>
+      </header>
+      <div class="results-body">
+        <table class="results-table">
+          <thead><tr><th>Trial #</th><th>Target</th><th>Response</th></tr></thead>
+          <tbody id="results-rows"></tbody>
+        </table>
+        <div class="logbook">
+          <p class="logbook-msg">Please enter all trial data into Skills Logbook before beginning a new session.</p>
+          <label class="check-row">
+            <input type="checkbox" id="chk-logbook">
+            <span>I have entered all data into Skills Logbook.</span>
+          </label>
+          <button id="btn-new" class="btn btn-primary btn-xl" disabled>Start New Session</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ START OVER CONFIRM ============ -->
+  <div id="confirm-overlay" class="overlay" hidden>
+    <div class="overlay-card" role="alertdialog" aria-modal="true" aria-labelledby="confirm-msg">
+      <h2>Start Over?</h2>
+      <p id="confirm-msg">Starting over will permanently erase the current session's trial data. Are you sure?</p>
+      <div class="confirm-actions">
+        <button id="btn-cancel" class="btn btn-secondary btn-lg">Cancel</button>
+        <button id="btn-confirm-startover" class="btn btn-danger btn-lg">Yes, Start Over</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

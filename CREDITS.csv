@@ -1,0 +1,70 @@
+file,location,photo_number,people,source_url,author,license,date_added
+bedroom-1.jpg,Bedroom,1,none,user-supplied,,,2026-11-17
+bedroom-2.jpg,Bedroom,2,none,user-supplied,,,2026-11-17
+bedroom-3.jpg,Bedroom,3,none,user-supplied,,,2026-11-17
+bathroom-1.jpg,Bathroom,1,none,user-supplied,,,2026-11-17
+bathroom-2.jpg,Bathroom,2,none,user-supplied,,,2026-11-17
+bathroom-3.jpg,Bathroom,3,none,user-supplied,,,2026-11-17
+kitchen-1.jpg,Kitchen,1,group,user-supplied,,,2026-11-17
+kitchen-2.jpg,Kitchen,2,female,user-supplied,,,2026-11-17
+kitchen-3.jpg,Kitchen,3,none,user-supplied,,,2026-11-17
+living-room-1.jpg,Living room,1,none,user-supplied,,,2026-11-17
+living-room-2.jpg,Living room,2,none,user-supplied,,,2026-11-17
+living-room-3.jpg,Living room,3,none,user-supplied,,,2026-11-17
+backyard-1.jpg,Backyard,1,none,user-supplied,,,2026-11-17
+backyard-2.jpg,Backyard,2,none,user-supplied,,,2026-11-17
+backyard-3.jpg,Backyard,3,none,user-supplied,,,2026-11-17
+garage-1.jpg,Garage,1,none,user-supplied,,,2026-11-17
+garage-2.jpg,Garage,2,none,user-supplied,,,2026-11-17
+garage-3.jpg,Garage,3,none,user-supplied,,,2026-11-17
+swimming-pool-1.jpg,Swimming pool,1,none,user-supplied,,,2026-11-17
+swimming-pool-2.jpg,Swimming pool,2,group,user-supplied,,,2026-11-17
+swimming-pool-3.jpg,Swimming pool,3,group,user-supplied (nipic.com watermark at bottom),,watermarked - replace or license,2026-11-17
+post-office-1.jpg,Post office,1,group,user-supplied,,,2026-11-17
+post-office-2.jpg,Post office,2,group,user-supplied,,,2026-11-17
+post-office-3.jpg,Post office,3,group,user-supplied (sign reads 'Post Office'; kept as Photo 3 so it unlocks last),,,2026-11-17
+school-1.jpg,School,1,group,user-supplied,,,2026-11-17
+school-2.jpg,School,2,group,user-supplied,,,2026-11-17
+school-3.jpg,School,3,group,user-supplied,,,2026-11-17
+beach-1.jpg,Beach,1,none,user-supplied,,,2026-11-17
+beach-2.jpg,Beach,2,group,user-supplied,,,2026-11-17
+beach-3.jpg,Beach,3,group,user-supplied,,,2026-11-17
+grocery-store-1.jpg,Grocery store,1,none,user-supplied,,,2026-11-17
+grocery-store-2.jpg,Grocery store,2,none,user-supplied,,,2026-11-17
+grocery-store-3.jpg,Grocery store,3,female,user-supplied,,,2026-11-17
+library-1.jpg,Library,1,none,user-supplied,,,2026-11-17
+library-2.jpg,Library,2,group,user-supplied,,,2026-11-17
+library-3.jpg,Library,3,none,user-supplied,,,2026-11-17
+hospital-1.jpg,Hospital,1,none,user-supplied,,,2026-11-17
+hospital-2.jpg,Hospital,2,group,user-supplied,,,2026-11-17
+hospital-3.jpg,Hospital,3,none,user-supplied,,,2026-11-17
+gas-station-1.jpg,Gas station,1,none,user-supplied,,,2026-11-17
+gas-station-2.jpg,Gas station,2,male,user-supplied,,,2026-11-17
+gas-station-3.jpg,Gas station,3,none,user-supplied,,,2026-11-17
+police-station-1.jpg,Police station,1,none,user-supplied (sign/car read 'POLICE'; small image),,,2026-11-17
+police-station-2.jpg,Police station,2,male,user-supplied (Unsplash+ watermark; uniform reads 'POLIS'),,watermarked - replace or license,2026-11-17
+police-station-3.jpg,Police station,3,none,user-supplied (sign reads 'POLICE STATION'; faint Dreamstime watermark; kept as Photo 3),,watermarked - replace or license,2026-11-17
+fire-station-1.jpg,Fire station,1,none,user-supplied,,,2026-11-17
+fire-station-2.jpg,Fire station,2,none,user-supplied,,,2026-11-17
+fire-station-3.jpg,Fire station,3,none,user-supplied (sign reads 'FIRE DEPARTMENT'; kept as Photo 3),,,2026-11-17
+park-1.jpg,Park,1,group,user-supplied,,,2026-11-17
+park-2.jpg,Park,2,group,user-supplied (faint Magnific watermark),,watermarked - replace or license,2026-11-17
+park-3.jpg,Park,3,group,user-supplied,,,2026-11-17
+zoo-1.jpg,Zoo,1,group,user-supplied,,,2026-11-18
+zoo-2.jpg,Zoo,2,group,user-supplied,,,2026-11-18
+zoo-3.jpg,Zoo,3,female,user-supplied,,,2026-11-18
+farm-1.jpg,Farm,1,none,user-supplied,,,2026-11-18
+farm-2.jpg,Farm,2,none,user-supplied,,,2026-11-18
+farm-3.jpg,Farm,3,group,user-supplied,,,2026-11-18
+gym-1.jpg,Gym,1,male,user-supplied,,,2026-11-18
+gym-2.jpg,Gym,2,group,user-supplied,,,2026-11-18
+gym-3.jpg,Gym,3,female,user-supplied,,,2026-11-18
+hair-salon-1.jpg,Hair salon,1,group,user-supplied,,,2026-11-18
+hair-salon-2.jpg,Hair salon,2,group,user-supplied,,,2026-11-18
+hair-salon-3.jpg,Hair salon,3,unclear,user-supplied (close-up; kept as Photo 3),,,2026-11-18
+restaurant-1.jpg,Restaurant,1,group,user-supplied,,,2026-11-17
+restaurant-2.jpg,Restaurant,2,group,user-supplied,,,2026-11-17
+restaurant-3.jpg,Restaurant,3,group,user-supplied (McDonald's branding; kept as Photo 3),,,2026-11-17
+dentists-office-1.jpg,Dentist's office,1,group,user-supplied,,,2026-11-17
+dentists-office-2.jpg,Dentist's office,2,group,user-supplied,,,2026-11-17
+dentists-office-3.jpg,Dentist's office,3,group,user-supplied,,,2026-11-17
