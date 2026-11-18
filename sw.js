@@ -2,22 +2,22 @@
  * Service worker: precaches the app and all photographs so teaching works offline.
  * When you change ANY file, bump CACHE_VERSION so iPads pick up the new version.
  */
-var CACHE_VERSION = "v1.45.0";
+var CACHE_VERSION = "v2.0.0";
 var CACHE_NAME = "locations-ei-" + CACHE_VERSION;
 
-importScripts("js/data.js");
+importScripts("data.js");
 
 var APP_SHELL = [
   "./",
   "index.html",
-  "css/styles.css",
-  "js/data.js",
-  "js/engine.js",
-  "js/app.js",
+  "styles.css",
+  "data.js",
+  "engine.js",
+  "app.js",
   "manifest.webmanifest",
-  "icons/icon-192.png",
-  "icons/icon-512.png",
-  "icons/apple-touch-icon.png"
+  "icon-192.png",
+  "icon-512.png",
+  "apple-touch-icon.png"
 ];
 
 function photoUrls() {
